@@ -186,3 +186,45 @@ print("### PONTEIRO ###\n");
 print("Não tem PONTEIRO \n");
 print("Não é necessário liberar memória manualmente, como em C ou C++. A variável será automaticamente coletada pelo coletor de lixo quando não estiver mais em uso. \n");
 print("\n");
+
+-- TRY CATCH
+print("### TRY CATCH ###\n");
+io.write("Informe o valor 1 para o dividendo: ")
+local numero1 = tonumber(io.read("*n"))
+
+io.write("Informe o valor 2 para o divisor: ")
+local numero2 = tonumber(io.read("*n"))
+
+if numero2 == 0 then
+  error('Divisão por zero não é permitida!')
+end
+
+local resultado = numero1 / numero2
+print(string.format('Resultado da divisão: %.2f', resultado))
+print("\n");
+
+-- ENUM
+print("### ENUM ###\n");
+Cor = {
+    Vermelho = 1,
+    Verde = 2,
+    Azul = 3,
+    Amarelo = 4,
+    Laranja = 5
+}
+
+local minhaCor = Cor.Azul
+
+if minhaCor == Cor.Vermelho then
+    print("Minha cor favorita é vermelho.")
+elseif minhaCor == Cor.Verde then
+    print("Minha cor favorita é verde.")
+elseif minhaCor == Cor.Azul then
+    print("Minha cor favorita é azul.")
+elseif minhaCor == Cor.Amarelo then
+    print("Minha cor favorita é amarelo.")
+elseif minhaCor == Cor.Laranja then
+    print("Minha cor favorita é laranja.")
+else
+    print("Eu não tenho uma cor favorita.")
+end
